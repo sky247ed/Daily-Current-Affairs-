@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Current Affairs Notes</title>
+    <!-- Google Fonts for Hindi and English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            --accent-green: #10B981;
+            --accent-orange: #F59E0B;
+            --accent-blue: #3B82F6;
+            --accent-purple: #8B5CF6;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            background-color: #f3f4f6;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 100vh;
+            color: #1f2937;
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .note-card {
+            background: var(--glass-bg);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .note-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--accent-blue);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 0.5rem;
+        }
+
+        .list-bullet {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .list-bullet::before {
+            content: "➤";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        .sub-bullet {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-top: 0.25rem;
+            font-size: 0.95em;
+            color: #4b5563;
+        }
+        .sub-bullet::before {
+            content: "➭";
+            position: absolute;
+            left: 0;
+            color: #6b7280;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        .cg-card-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+        }
+    </style>
+</head>
+<body class="pb-12">
+
+    <!-- Header -->
+    <header class="glass-header sticky top-0 z-50 py-4 mb-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-2xl md:text-4xl font-bold text-white tracking-tight drop-shadow-md">
+                Daily Current Affairs <span class="text-yellow-400">At a Glance</span>
+            </h1>
+            <p class="text-blue-100 text-sm md:text-base mt-1 opacity-90">
+                #Daily_Current_Affairs_At_a_Glance | <i class="far fa-calendar-alt mr-1"></i> Today's Update
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Section 1: International -->
+        <div class="note-card p-6 flex flex-col gap-4 border-t-4 border-blue-500">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                    <i class="fas fa-globe-americas text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-gray-800">अंतर्राष्ट्रीय (International)</h2>
+            </div>
+            
+            <!-- EPI 2024 -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">🌱 पर्यावरण प्रदर्शन सूचकांक (EPI) 2024</h3>
+                <div class="space-y-1 text-sm text-gray-700">
+                    <p class="sub-bullet"><strong>भारत की रैंक:</strong> <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded font-bold">176वीं</span></p>
+                    <p class="sub-bullet">कुल देश: 180</p>
+                    <p class="sub-bullet">जारीकर्ता: Yale University</p>
+                </div>
+            </div>
+
+            <!-- Waterbird Census -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-lg text-blue-700 mb-2">🐦 एशियाई/अंतर्राष्ट्रीय जलपक्षी गणना 2026</h3>
+                <div class="text-sm text-gray-600 mb-2">
+                    <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs font-bold">10–11 जनवरी 2026</span>
+                </div>
+                <div class="space-y-1 text-sm text-gray-700">
+                    <p class="sub-bullet">40वीं Asian Waterbird Census (AWC)</p>
+                    <p class="sub-bullet">60वीं International Waterbird Census (IWC)</p>
+                    <div class="bg-blue-50 p-2 rounded mt-2">
+                        <p class="font-semibold text-blue-800 text-xs uppercase mb-1">प्रमुख क्षेत्र (आंध्र प्रदेश)</p>
+                        <p class="sub-bullet text-xs">गोदावरी मुहाना</p>
+                        <p class="sub-bullet text-xs">कोरिंगा वन्यजीव अभयारण्य</p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-xs font-bold text-gray-500 uppercase">विशेष फोकस:</p>
+                        <div class="flex gap-2 mt-1">
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded border">Indian Skimmer</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded border">Great Knot</span>
+                        </div>
+                    </div>
+                    <p class="sub-bullet mt-2">सहभागी: BNHS & Wetlands International</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: National & Sci-Tech -->
+        <div class="flex flex-col gap-6">
+            
+            <!-- National -->
+            <div class="note-card p-6 border-t-4 border-orange-500">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-orange-100 text-orange-600 p-3 rounded-full">
+                        <i class="fas fa-flag text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">राष्ट्रीय (National)</h2>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg text-orange-700 mb-2">🚀 आकाश-एनजी (Akash-NG) मिसाइल</h3>
+                    <div class="highlight-box border-l-orange-500 bg-orange-50">
+                        <p class="text-sm">DRDO द्वारा User Trials सफलतापूर्वक पूर्ण</p>
+                    </div>
+                    <div class="space-y-1 text-sm text-gray-700 mt-2">
+                        <p class="sub-bullet"><strong>स्थल:</strong> Integrated Test Range, चांदीपुर (ओडिशा)</p>
+                        <p class="sub-bullet">पुरानी आकाश मिसाइल का Advanced Version</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sci-Tech -->
+            <div class="note-card p-6 border-t-4 border-purple-500">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-purple-100 text-purple-600 p-3 rounded-full">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">विज्ञान और तकनीक</h2>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <h3 class="font-bold text-lg text-purple-700 mb-2">💡🤖 चीन की ‘LightGen’ AI चिप</h3>
+                    <p class="text-xs text-gray-500 mb-2 italic">प्रकाश से संचालित (Photonic) AI चिप</p>
+                    <ul class="text-sm space-y-2 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-bolt text-yellow-500 mt-1"></i>
+                            <span>NVIDIA के हार्डवेयर से <strong>100 गुना तेज</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-brain text-pink-500 mt-1"></i>
+                            <span>20 लाख+ Photonic Neurons</span>
+                        </li>
+                        <li class="sub-bullet">बिजली के बजाय रोशनी से कार्य</li>
+                        <li class="sub-bullet">कम गर्मी, कम ऊर्जा खपत</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 3: Chhattisgarh Special (Full Column/Large Card) -->
+        <div class="note-card p-0 border-t-4 border-green-600 lg:col-span-1 cg-card-gradient flex flex-col h-full">
+            <div class="p-6 pb-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-green-100 text-green-700 p-3 rounded-full">
+                        <i class="fas fa-tree text-xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">छत्तीसगढ़ विशेषांक</h2>
+                </div>
+            </div>
+
+            <div class="px-6 pb-6 space-y-4 flex-grow overflow-y-auto max-h-[600px] custom-scrollbar">
+                
+                <!-- Bal Puraskar -->
+                <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-yellow-400 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded-bl-lg">AWARD</div>
+                    <h3 class="font-bold text-gray-800">🏅 प्रधानमंत्री राष्ट्रीय बाल पुरस्कार 2025</h3>
+                    <div class="mt-2 grid grid-cols-2 gap-2 text-sm">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <span class="text-xs text-gray-500 block">नाम</span>
+                            <span class="font-bold text-gray-800">योगिता मंडावी</span>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <span class="text-xs text-gray-500 block">जिला</span>
+                            <span class="font-bold text-gray-800">कोंडागांव</span>
+                        </div>
+                    </div>
+                    <p class="text-xs mt-2 text-gray-600"><i class="fas fa-jedi text-yellow-600 mr-1"></i> खेल: जूडो</p>
+                </div>
+
+                <!-- CM Excellence Award Header -->
+                <div class="bg-green-700 text-white p-3 rounded-lg text-center shadow-lg">
+                    <h3 class="font-bold text-lg">🏆 मुख्यमंत्री उत्कृष्टता पुरस्कार</h3>
+                    <p class="text-xs opacity-80">2025–26 | सुशासन दिवस (25 Dec)</p>
+                </div>
+
+                <!-- District Winners -->
+                <div>
+                    <h4 class="font-bold text-green-800 mb-2 border-b border-green-200 pb-1">🏘️ जिला श्रेणी विजेता (Top 5)</h4>
+                    <div class="space-y-2">
+                        <div class="bg-white p-3 rounded-lg shadow-sm text-sm border hover:border-green-400 transition-colors">
+                            <span class="font-bold block text-green-700">1. दंतेवाड़ा</span>
+                            <span class="text-gray-600 text-xs">ब्लॉकचेन आधारित भूमि अभिलेख डिजिटलीकरण</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm text-sm border hover:border-green-400 transition-colors">
+                            <span class="font-bold block text-green-700">2. जशपुर</span>
+                            <span class="text-gray-600 text-xs">“निर्माण जशपुर” (कौशल विकास/रोजगार)</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm text-sm border hover:border-green-400 transition-colors">
+                            <span class="font-bold block text-green-700">3. मोहला–मानपुर–अंबागढ़ चौकी</span>
+                            <span class="text-gray-600 text-xs">संवर्धित टेक-होम राशन (A-THR)</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm text-sm border hover:border-green-400 transition-colors">
+                            <span class="font-bold block text-green-700">4. गरियाबंद</span>
+                            <span class="text-gray-600 text-xs">हाथी ट्रैकिंग एवं अलर्ट ऐप</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm text-sm border hover:border-green-400 transition-colors">
+                            <span class="font-bold block text-green-700">5. नारायणपुर</span>
+                            <span class="text-gray-600 text-xs">Intify Intelligence Tool का उपयोग</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department Winners -->
+                <div>
+                    <h4 class="font-bold text-blue-800 mb-2 border-b border-blue-200 pb-1 mt-4">🏢 विभागीय श्रेणी विजेता (Top 5)</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-2 bg-blue-50 p-2 rounded text-sm">
+                            <i class="fas fa-school text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-bold block text-gray-800">स्कूल शिक्षा विभाग</span>
+                                <span class="text-xs text-gray-600">विद्या समीक्षा केंद्र (VSK)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2 bg-blue-50 p-2 rounded text-sm">
+                            <i class="fas fa-industry text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-bold block text-gray-800">वाणिज्य एवं उद्योग विभाग</span>
+                                <span class="text-xs text-gray-600">वन क्लिक सिंगल विंडो सिस्टम</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2 bg-blue-50 p-2 rounded text-sm">
+                            <i class="fas fa-wine-bottle text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-bold block text-gray-800">वाणिज्य कर (आबकारी)</span>
+                                <span class="text-xs text-gray-600">समग्र ई-गवर्नेंस (पारदर्शिता)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2 bg-blue-50 p-2 rounded text-sm">
+                            <i class="fas fa-leaf text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-bold block text-gray-800">वन विभाग</span>
+                                <span class="text-xs text-gray-600">FDS 2.0 – ई-कुबेर भुगतान</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2 bg-blue-50 p-2 rounded text-sm">
+                            <i class="fas fa-tractor text-blue-500 mt-1"></i>
+                            <div>
+                                <span class="font-bold block text-gray-800">पंचायत विभाग (MGNREGA)</span>
+                                <span class="text-xs text-gray-600">QR कोड सूचना स्वप्रकटीकरण</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer / Social Actions -->
+    <div class="container mx-auto px-4 mt-8">
+        <div class="glass-header rounded-2xl p-6 text-center shadow-lg mb-8">
+            <h3 class="text-white text-lg font-bold mb-4">✨ Stay Updated with the Best Current Affairs! ✨</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                
+                <!-- TELEGRAM LINK: Replace the # with your actual link -->
+                <a href="https://t.me/Current_affairs_cg/11391" target="_blank" class="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg transition-transform transform hover:scale-105 no-underline">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+
+                <!-- WHATSAPP LINK: Replace the # with your actual link -->
+                <a href="https://whatsapp.com/channel/0029Va4wRj1KbYMS76tEQx1u/2978" target="_blank" class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg transition-transform transform hover:scale-105 no-underline">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+
+                <!-- YOUTUBE LINK -->
+                <a href="https://www.youtube.com/@current_affairs_cg" target="_blank" class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg transition-transform transform hover:scale-105 no-underline">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+
+            </div>
+            <p class="text-blue-100 text-xs mt-4">💡 Your one-stop hub for Daily Updates, Quizzes & Smart Learning! 📚🔥</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
